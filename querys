@@ -1,0 +1,8 @@
+select 	fabricantes.id,fabricantes.nombre,
+		relcatfab.idfab,relcatfab.idmot,
+		categorias.id,categorias.nombre
+		
+from    relcatfab,categorias,fabricantes
+where   (relcatfab.idfab=1)and
+		(categorias.id=relcatfab.idmot)and
+		(relcatfab.idfab=fabricantes.id);
